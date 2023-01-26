@@ -35,3 +35,15 @@ test("One dolar should be 130.10 yens", function(){
     // this is the comparison for the unit test
      expect(yens).toBe(expected); 
 });
+
+test("One yen should be 0.0217 pounds", function(){
+    //import the function from app.js
+    const { fromYenToPound } = require('./app.js')
+
+    const yens = fromYenToPound(3.5)
+
+    const expected = 3.5 * 0.0062; 
+    
+    // this is the comparison for the unit test
+     expect(yens).toBe(expected); 
+});
